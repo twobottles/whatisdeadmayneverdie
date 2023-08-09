@@ -1,8 +1,5 @@
 from urllib.parse import urlencode
 import flask
-import numpy as np 
-from chartdata import *
-from karen import *
 
 import telebot
 import requests
