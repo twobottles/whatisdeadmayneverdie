@@ -1,6 +1,5 @@
 Flask
 Gunicorn
-urlencode
 CORS
 requests
 numpy
