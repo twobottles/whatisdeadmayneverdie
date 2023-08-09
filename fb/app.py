@@ -1,9 +1,16 @@
 from urllib.parse import urlencode
 import flask
+from flask import request, jsonify
+from flask_cors import CORS
+import numpy as np 
+from chartdata import *
+from karen import *
 
 import telebot
-import requests
+
+
 import time
+
 import json
 from web3 import Web3
 from time import strftime, localtime
