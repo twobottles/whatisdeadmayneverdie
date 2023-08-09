@@ -5,5 +5,4 @@ requests
 numpy
 telebot
 telepot
-json
 Web3
