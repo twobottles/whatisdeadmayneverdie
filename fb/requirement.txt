@@ -1,0 +1,9 @@
+Flask
+urlencode
+CORS
+requests
+numpy
+telebot
+telepot
+json
+Web3
