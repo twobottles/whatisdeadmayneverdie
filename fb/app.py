@@ -13,7 +13,7 @@ import time
 app = flask.Flask(__name__)
 
 
-API_KEY = "6410870870:AAHP4qYwvJevzSrt9ehLgFBDBTapQ3exBTo"
+API_KEY = "6410870870:AAFmQseFtxAo-wFkNCMW4O6wU9j3OtBmpMc"
 bot = telebot.TeleBot(API_KEY)
 
 
