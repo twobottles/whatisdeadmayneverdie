@@ -157,11 +157,11 @@ def updates(message):
     timeRemScheDisplay = timeRemSched.strftime('%B %d, %Y %I:%M %p');
 
     lastBuyTx = '';
-    reply = f'<b><i>MEGA JACKPOT</i></b>';
+    reply = f'<b><i>🎰🎰🤑🤑💰💰MEGA JACKPOT 💰💰🤑🤑🎰🎰</i></b>';
     reply += '\n \n'
-    reply += f'TOTAL REWARDS (ETH): <b>{Web3.from_wei(totalRewards,"ether")}</b>' ;
+    reply += f'TOTAL REWARDS (ETH): <b>{Web3.from_wei(totalRewards,"ether")}🤑</b>' ;
     reply += '\n \n'
-    reply += f'LAST BUYER: <b>{lastBuyer}</b>' ;
+    reply += f'LAST BUYER: <b>{lastBuyer}👝</b>' ;
     reply += '\n \n'
     reply += f'LAST BUY DATE/TIME: <b>{lastBuyTimeReadable}</b>' ;
     reply += '\n \n'
@@ -169,13 +169,13 @@ def updates(message):
     reply += '\n \n'
     reply += f'IDLE TIME: <b>{idleTime} HRS</b>' ;
     reply += '\n \n'
-    reply += f'ESTIMATED DISTRIBUTION TIME: <b>{dateTimeRemaining}</b>' ;
+    reply += f'ESTIMATED DISTRIBUTION TIME: <b>{dateTimeRemaining}🕛</b>' ;
     reply += '\n \n'
     reply += '\n \n'
     reply += '\n \n'
-    reply += f'<b><i>SCHEDULED REWARD</i></b>';
+    reply += f'<b><i>🤑🤑🕐🕐💰💰SCHEDULED REWARD 🤑🤑🕐🕐💰💰</i></b>';
     reply += '\n \n'
-    reply += f'TOTAL REWARDS (ETH): <b>{Web3.from_wei(schedReward,"ether")}</b>' ;
+    reply += f'TOTAL REWARDS (ETH): <b>{Web3.from_wei(schedReward,"ether")}💰</b>' ;
     reply += '\n \n'
     reply += f'TOTAL POINTS: <b>{totalPoints}</b>' ;
     reply += '\n \n'
@@ -183,10 +183,10 @@ def updates(message):
     reply += '\n \n';
     reply += '\n \n';
 
-    reply += f"OFFICIAL WEBSITE: {website}"
+    reply += f"Official Webiste: {website}"
     reply += '\n \n';
 
-    reply += f"UNISWAP: {website}"
+    reply += f"Uniswap Link: {uniswapWebsite}"
     
 
 
