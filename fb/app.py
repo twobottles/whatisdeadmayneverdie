@@ -17,7 +17,7 @@ import time
 app = flask.Flask(__name__)
 
 
-API_KEY = "6675017105:AAFevSd-BC5bQxxBWdoKq34wMKOU0AH8Mfs"
+API_KEY = "6675017105:AAG-FF1knya3yhu8MiKamXMfB1upVxAcOSs"
 bot = telebot.TeleBot(API_KEY)
 bot.set_webhook()
 
@@ -47,7 +47,7 @@ def commands(message):
     reply += '\n \n'
     reply += f'/updates - Get scheduled and mega jackpot details';
     reply += '\n \n'
-    reply += f'/winners - Get all winner''s TX';
+    reply += f'/lucky - Get all winner''s TX';
     
     
     bot.reply_to(message, reply,parse_mode='html')
@@ -118,7 +118,7 @@ def points(message):
     reply += f'💯<b>CHANCE OF WINNING:</b> {chanceOfWinning}%'
     reply += '\n \n';
     reply += '\n \n';
-    reply += f"<b>Official Webiste:</b> {website}"
+    reply += f"<b>Official Website:</b> {website}"
     reply += '\n \n';
     reply += f"<b>Uniswap Link:</b> {uniswapWebsite}"
 
@@ -190,7 +190,7 @@ def updates(message):
     reply += '\n \n';
     reply += '\n \n';
 
-    reply += f"<b>Official Webiste:</b> {website}"
+    reply += f"<b>Official Website:</b> {website}"
     reply += '\n \n';
 
     reply += f"<b>Uniswap Link:</b> {uniswapWebsite}"
@@ -207,19 +207,20 @@ def updates(message):
    print(e)
 
 
-@bot.message_handler(commands=['winners'])
-def winners(message):
-  reply = "WINNERS";
+@bot.message_handler(commands=['lucky'])
+def lucky(message):
+  reply = "🚀LUCKY WINNERS💯";
   reply += '\n \n';
   reply += 'https://etherscan.io/tx/0xc1222e67ca733dcb4461f31e75d9062e2f0571aede287fda38dc59fac0101374'
 
   reply += '\n \n';
   reply += '\n \n';
 
-  reply += f"<b>Official Webiste:</b> {website}"
+  reply += f"<b>Official Website:</b> {website}"
   reply += '\n \n';
 
   reply += f"<b>Uniswap Link:</b> {uniswapWebsite}";
+  bot.reply_to(message, reply,parse_mode='html')
 
 bot.infinity_polling();
 
