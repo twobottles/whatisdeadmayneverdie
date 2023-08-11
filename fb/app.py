@@ -224,4 +224,4 @@ def lucky(message):
 
 bot.infinity_polling();
 
-app.run()
+#app.run()
