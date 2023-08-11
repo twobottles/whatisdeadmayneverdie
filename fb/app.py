@@ -19,7 +19,7 @@ app = flask.Flask(__name__)
 
 API_KEY = "6675017105:AAFevSd-BC5bQxxBWdoKq34wMKOU0AH8Mfs"
 bot = telebot.TeleBot(API_KEY)
-
+bot.set_webhook()
 
 infura_url = 'https://mainnet.infura.io/v3/9c6be22ff67941c0b009f9e909cfc052'
 web3 = Web3(Web3.HTTPProvider(infura_url))
@@ -207,6 +207,6 @@ def updates(message):
 
 
 
-bot.polling();
+bot.infinity_polling();
 
 app.run()
