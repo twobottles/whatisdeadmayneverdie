@@ -46,6 +46,9 @@ def commands(message):
     reply += f'/points [address] - To get wallet address details';
     reply += '\n \n'
     reply += f'/updates - Get scheduled and mega jackpot details';
+    reply += '\n \n'
+    reply += f'/winners - Get all winner''s TX';
+    
     
     bot.reply_to(message, reply,parse_mode='html')
 
@@ -204,8 +207,19 @@ def updates(message):
    print(e)
 
 
+@bot.message_handler(commands=['winners'])
+def winners(message):
+  reply = "WINNERS";
+  reply += '\n \n';
+  reply += 'https://etherscan.io/tx/0xc1222e67ca733dcb4461f31e75d9062e2f0571aede287fda38dc59fac0101374'
 
+  reply += '\n \n';
+  reply += '\n \n';
 
+  reply += f"<b>Official Webiste:</b> {website}"
+  reply += '\n \n';
+
+  reply += f"<b>Uniswap Link:</b> {uniswapWebsite}";
 
 bot.infinity_polling();
 
