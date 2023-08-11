@@ -101,18 +101,21 @@ def points(message):
 
 
     balance = Web3.from_wei(getBalance(address),'ether');
-    reply = f'WALLET ADDRESS: <b>{address}</b>';
+    reply = f'👝<b>WALLET ADDRESS:</b> {address}';
     reply += '\n \n'
 
-    reply += f'BALANCE: <b>{balance}</b>';
+    reply += f'🤑<b>BALANCE:</b> {balance}';
     reply += '\n \n'
   
-    reply += f'ACCUMULATED POINTS: <b>{holderPoints}</b>'
+    reply += f'🚀<b>ACCUMULATED POINTS:</b> {holderPoints}'
     reply += '\n \n'
 
-    reply += f'CHANCE OF WINNING <b>{chanceOfWinning}%</b>'
+    reply += f'💯<b>CHANCE OF WINNING:</b> {chanceOfWinning}%'
     reply += '\n \n';
     reply += '\n \n';
+    reply += f"<b>Official Webiste:</b> {website}"
+    reply += '\n \n';
+    reply += f"<b>Uniswap Link:</b> {uniswapWebsite}"
 
 
     bot.reply_to(message, reply,parse_mode='html')
@@ -159,34 +162,34 @@ def updates(message):
     lastBuyTx = '';
     reply = f'<b><i>🎰🎰🤑🤑💰💰MEGA JACKPOT 💰💰🤑🤑🎰🎰</i></b>';
     reply += '\n \n'
-    reply += f'TOTAL REWARDS (ETH): <b>{Web3.from_wei(totalRewards,"ether")}🤑</b>' ;
+    reply += f'<b>TOTAL REWARDS (ETH):</b> {Web3.from_wei(totalRewards,"ether")}🤑' ;
     reply += '\n \n'
-    reply += f'LAST BUYER: <b>{lastBuyer}👝</b>' ;
+    reply += f'<b>LAST BUYER:</b> {lastBuyer}👝' ;
     reply += '\n \n'
-    reply += f'LAST BUY DATE/TIME: <b>{lastBuyTimeReadable}</b>' ;
+    reply += f'<b>LAST BUY DATE/TIME:</b> {lastBuyTimeReadable}' ;
     reply += '\n \n'
-    reply += f'LAST BUY TX: <b>{lastBuyTx}</b>' ;
+    reply += f'<b>LAST BUY TX:</b> {lastBuyTx}' ;
     reply += '\n \n'
-    reply += f'IDLE TIME: <b>{idleTime} HRS</b>' ;
+    reply += f'<b>IDLE TIME:</b> {idleTime} HRS' ;
     reply += '\n \n'
-    reply += f'ESTIMATED DISTRIBUTION TIME: <b>{dateTimeRemaining}🕛</b>' ;
+    reply += f'<b>ESTIMATED DISTRIBUTION TIME:</b> {dateTimeRemaining}🕛' ;
     reply += '\n \n'
     reply += '\n \n'
     reply += '\n \n'
     reply += f'<b><i>🤑🤑🕐🕐💰💰SCHEDULED REWARD 🤑🤑🕐🕐💰💰</i></b>';
     reply += '\n \n'
-    reply += f'TOTAL REWARDS (ETH): <b>{Web3.from_wei(schedReward,"ether")}💰</b>' ;
+    reply += f'<b>TOTAL REWARDS (ETH):</b> {Web3.from_wei(schedReward,"ether")}💰' ;
     reply += '\n \n'
-    reply += f'TOTAL POINTS: <b>{totalPoints}</b>' ;
+    reply += f'<b>TOTAL POINTS:</b> {totalPoints}' ;
     reply += '\n \n'
-    reply += f'ESTIMATED DISTRIBUTION TIME: <b>{timeRemScheDisplay}</b>' ;
+    reply += f'<b>ESTIMATED DISTRIBUTION TIME:</b> {timeRemScheDisplay}' ;
     reply += '\n \n';
     reply += '\n \n';
 
-    reply += f"Official Webiste: {website}"
+    reply += f"<b>Official Webiste:</b> {website}"
     reply += '\n \n';
 
-    reply += f"Uniswap Link: {uniswapWebsite}"
+    reply += f"<b>Uniswap Link:</b> {uniswapWebsite}"
     
 
 
