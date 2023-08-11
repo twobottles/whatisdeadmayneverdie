@@ -91,44 +91,47 @@ def points(message):
       bot.reply_to(message, reply,parse_mode='html')
       return;
     
+    address = '';
 
-    if web3.utils.isAddress(message.text):
-
+    try:
       address = Web3.to_checksum_address(message.text);
-      holderPoints = contract.functions.getPoints(address).call();
-
-      totalPoints = contract.functions.getTotalPointsExt().call()
-      
-      chanceOfWinning = int((holderPoints / totalPoints) * 100);
-
-
-
-      balance = Web3.from_wei(getBalance(address),'ether');
-      reply = f'👝<b>WALLET ADDRESS:</b> {address}';
-      reply += '\n \n'
-
-      reply += f'🤑<b>BALANCE:</b> {balance}';
-      reply += '\n \n'
-    
-      reply += f'🚀<b>ACCUMULATED POINTS:</b> {holderPoints}'
-      reply += '\n \n'
-
-      reply += f'💯<b>CHANCE OF WINNING:</b> {chanceOfWinning}%'
+    except Exception as e:
+      reply = f'Please input valid wallet address.';
       reply += '\n \n';
-      reply += '\n \n';
-      reply += f"<b>Official Webiste:</b> {website}"
-      reply += '\n \n';
-      reply += f"<b>Uniswap Link:</b> {uniswapWebsite}"
-
-
-      bot.reply_to(message, reply,parse_mode='html')
-
-    else:
-      reply = f'Invalid wallet address';
-      reply += '\n \n';
-      reply += f'ex :  /points 0x0000000000000000000000000000000000000000 ';
       bot.reply_to(message, reply,parse_mode='html')
       return;
+    
+
+
+    holderPoints = contract.functions.getPoints(address).call();
+
+    totalPoints = contract.functions.getTotalPointsExt().call()
+    
+    chanceOfWinning = int((holderPoints / totalPoints) * 100);
+
+
+
+    balance = Web3.from_wei(getBalance(address),'ether');
+    reply = f'👝<b>WALLET ADDRESS:</b> {address}';
+    reply += '\n \n'
+
+    reply += f'🤑<b>BALANCE:</b> {balance}';
+    reply += '\n \n'
+  
+    reply += f'🚀<b>ACCUMULATED POINTS:</b> {holderPoints}'
+    reply += '\n \n'
+
+    reply += f'💯<b>CHANCE OF WINNING:</b> {chanceOfWinning}%'
+    reply += '\n \n';
+    reply += '\n \n';
+    reply += f"<b>Official Webiste:</b> {website}"
+    reply += '\n \n';
+    reply += f"<b>Uniswap Link:</b> {uniswapWebsite}"
+
+
+    bot.reply_to(message, reply,parse_mode='html')
+
+
           
   
   except Exception as e:
