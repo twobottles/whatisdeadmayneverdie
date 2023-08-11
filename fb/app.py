@@ -51,11 +51,7 @@ def commands(message):
 
   except Exception as e:
    print(e)
-   bot.stop_polling()
-   time.sleep(3)
-   bot.stop_bot()
-   time.sleep(3)
-   bot.polling();
+
 
 @bot.message_handler(commands=['website'])
 def getWebsites(message):
@@ -71,12 +67,7 @@ def contractAddress(message):
 
   except Exception as e:
    print(e)
-   bot.stop_polling()
-   time.sleep(3)
-   bot.stop_bot()
-   time.sleep(3)
-   bot.polling();
-
+ 
 
 @bot.message_handler(commands=['points'])
 def points(message):
@@ -135,12 +126,10 @@ def points(message):
           
   
   except Exception as e:
+  
+
     print(e)
-    bot.stop_polling()
-    time.sleep(3)
-    bot.stop_bot()
-    time.sleep(3)
-    bot.polling();
+
 
 
 @bot.message_handler(commands=['updates'])
@@ -213,11 +202,6 @@ def updates(message):
 
   except Exception as e:
    print(e)
-   bot.stop_polling()
-   time.sleep(3)
-   bot.stop_bot()
-   time.sleep(3)
-   bot.polling();
 
 
 
